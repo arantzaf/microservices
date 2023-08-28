@@ -10,6 +10,9 @@ jobs:
 
         steps:
             - checkout
+            - run:
+                name: output directory
+                command: ls -al
             - restore_cache:
                 keys:
                 - v1-dependencies-{{ checksum "requirements.txt" }}
